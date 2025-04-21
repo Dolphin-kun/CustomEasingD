@@ -30,21 +30,22 @@ namespace CustomEasingD
 
             double t = (double)frame / length;
 
-            var control1 = item.ControlPoints.ControlPoint1;
-            var control2 = item.ControlPoints.ControlPoint2;
+
+            //var control1 = item.ControlPoints.ControlPoint1;
+            //var control2 = item.ControlPoints.ControlPoint2;
 
             // ベジェ評価
-            var bezier = new BezierEvaluator(control1, control2);
-            double eased = bezier.Evaluate(t) / 200.0;
+            //var bezier = new BezierEvaluator(control1, control2);
+            //double eased = bezier.Evaluate(t) / 200.0;
 
-            float x = (float)(item.AnimateXStart + (item.AnimateXEnd - item.AnimateXStart) * eased);
+            //float x = (float)(item.AnimateXStart + (item.AnimateXEnd - item.AnimateXStart) * eased);
             //float y = (float)(item.AnimateYStart + (item.AnimateYEnd - item.AnimateYStart) * eased);
 
             var drawDesc = effectDescription.DrawDescription;
             return drawDesc with
             {
                 Draw = new(
-                    drawDesc.Draw.X -(float)x ,
+                    drawDesc.Draw.X ,
                     drawDesc.Draw.Y,
                     drawDesc.Draw.Z
                 ),

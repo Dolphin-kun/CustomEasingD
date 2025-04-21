@@ -19,6 +19,7 @@ namespace CustomEasingD
         [BezierControl]
         public BezierData ControlPoints { get; set; } = new();
 
+
         [Display(GroupName = "カスタムイージングD", Name = "始点", Description = "始点")]
         [Range(-10000, 10000)]
         [TextBoxSlider("F1", "px", -100, 100)]
@@ -45,6 +46,7 @@ namespace CustomEasingD
                 ControlPoint2 = new Point(145, 45);
             }
         }
+
 
 
         public override IEnumerable<string> CreateExoVideoFilters(int keyFrameIndex, ExoOutputDescription exoOutputDescription)
